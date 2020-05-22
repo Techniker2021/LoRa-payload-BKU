@@ -1,6 +1,6 @@
 
-//#include "LoRa-payload-BKU.h"
-#include <LoRa-payload-BKU.h>
+#include "LoRa-payload-BKU.h"
+//#include <LoRa-payload-BKU.h>
 //#include "\..\src\LoRa-payload-BKU.h"
 //#include "D:\Schule\VS-Cdode\VSC MKR 1300\LoRa_mkr_wan_Lib\LoRa_mkr_wan_Lib.h"
 
