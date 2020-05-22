@@ -9,7 +9,6 @@ To fill your payload-object with your measurement data you have three options.
 First you have to pass on the desired datatype from the list below, second your value. Repeat for all your measurements.
 All three options lead to the same results.
 
-
 Diese Library erlaubt es vorgefertigete Datentypen an TheThingsNetwork.org (TTN) mit einem Arduino MKRWAN 1300/1310 zu senden.
 
 ### Vorbereitung
