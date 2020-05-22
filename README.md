@@ -2,19 +2,16 @@ Deutsche Version siehe unten!!!
 # LoRa-payload-BKU
 This library will alow you to send predefined datatypes to TheThingsNetwork.org (TTN) via an Arduino MKRWAN 1300/1310.
 
-## procedure
-### preperation
+### Preperation
 Copy the content of the file "extras/Decoder.js" to the "Payload Formats" tab of your application on thethingsnetwork.org
-### sourcecode on your Arduino.
+### Sourcecode on your Arduino.
 To fill your payload-object with your measurement data you have three options.
 First you have to pass on the desired datatype from the list below, second your value. Repeat for all your measurements.
 All three options lead to the same results.
 
 
-# LoRa-payload-BKU
 Diese Library erlaubt es vorgefertigete Datentypen an TheThingsNetwork.org (TTN) mit einem Arduino MKRWAN 1300/1310 zu senden.
 
-## Arbeitsweise:
 ### Vorbereitung
 Kopiere den Inhalt der Datei "extras/Decoder.js" in das "Payload Formats" Tab deiner Anwendug bei TheThingsNetwork.org
 ### Quellcode auf dem Arduino.
@@ -22,8 +19,8 @@ Um das Payload Objekt mit deinen Sensorwerten zu füllen gibt es drei Möglichke
 In jeder übergibst du zuerst den gewünschten Datentypen aus der Liste (ganz unten), danach deinen Messwert. Wiederhole das für alle Messwerte.
 Alle drei Möglichkeiten führen zum selben Ergebnis.
 
-
-1 (predefined payload)
+# Snippets
+* 1 predefined payload
 
     paylaod meinpayload[2];
     meinpayload[0].TYPE = TYPE_TEMP;
@@ -31,14 +28,14 @@ Alle drei Möglichkeiten führen zum selben Ergebnis.
     meinpayload[1].TYPE = TYPE_RH;
     meinpayload[1].wert = (27);
 
-2 (using the constructor)
+* 2 using the constructor
 
     payload meinpayload[] = {
                             payload(TYPE_TEMP, -15.5),
                             payload(TYPE_RH, 27),
                             };
 
-3 (using the constructor with String)
+* 3 using the constructor with String
 
     payload meinpayload[] = {
                             {TYPE_TEMP, -15.5},
@@ -76,9 +73,9 @@ TYPE_EXT_TEMP2      = 0x19;  //External temp 2      2 bytes;    1 decimal place;
 TYPE_EXT_DIGITAL2   = 0x1A;  //Digital input 2      1 bytes;    0 decimal place;    value 1 or 0 
 TYPE_EXT_ANALOG_UV  = 0x1B;  //Load cell analog uV  4 bytes;    0 decimal place;    signed int (uV)
 TYPE_DEBUG          = 0x3D;  //debug                4 bytes;    0 decimal place;    debug
-```
+
 own extensions
-```
+
 TYPE_TEMP32		    = 0x1C;  //temperature;         4 bytes;    2 decimal place;    -21474836.48°C->21474181.12°C;
 TYPE_RH32           = 0x1D;  //Humidity;            4 byte;     2 decimal place;    0.00%->100.00%;
 TYPE_GAS_KOHMS      = 0x1E;  //Gas qualität         4 Byte;     0 decimal place;    in kOhm
