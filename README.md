@@ -1,4 +1,3 @@
-Deutsche Version siehe unten!!!
 # LoRa-payload-BKU
 This library will alow you to send predefined datatypes to TheThingsNetwork.org (TTN) via an Arduino MKRWAN 1300/1310.
 
@@ -10,7 +9,6 @@ First you have to pass on the desired datatype from the list below, second your 
 All three options lead to the same results.
 
 Diese Library erlaubt es vorgefertigete Datentypen an TheThingsNetwork.org (TTN) mit einem Arduino MKRWAN 1300/1310 zu senden.
-
 ### Vorbereitung
 Kopiere den Inhalt der Datei "extras/Decoder.js" in das "Payload Formats" Tab deiner Anwendug bei TheThingsNetwork.org
 ### Quellcode auf dem Arduino.
@@ -19,7 +17,7 @@ In jeder übergibst du zuerst den gewünschten Datentypen aus der Liste (ganz un
 Alle drei Möglichkeiten führen zum selben Ergebnis.
 
 # Snippets
-* 1 predefined payload
+1 predefined payload
 
     paylaod meinpayload[2];
     meinpayload[0].TYPE = TYPE_TEMP;
@@ -27,14 +25,14 @@ Alle drei Möglichkeiten führen zum selben Ergebnis.
     meinpayload[1].TYPE = TYPE_RH;
     meinpayload[1].wert = (27);
 
-* 2 using the constructor
+2 using the constructor
 
     payload meinpayload[] = {
                             payload(TYPE_TEMP, -15.5),
                             payload(TYPE_RH, 27),
                             };
 
-* 3 using the constructor with String
+3 using the constructor with String
 
     payload meinpayload[] = {
                             {TYPE_TEMP, -15.5},
@@ -81,5 +79,5 @@ TYPE_GAS_KOHMS      = 0x1E;  //Gas qualität         4 Byte;     0 decimal place
 TYPE_sign_of_life   = 0x1F;  //minimale übertragung;0 bytes;    0 decimal place;    I_am_alive=true;
 ```
 
-# extensions
+## extend List
 To add your own datatypes please refer to /src/construct_TYPE.h and /extras/Decoder.js
