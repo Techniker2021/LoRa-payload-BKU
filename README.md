@@ -1,7 +1,7 @@
 # LoRa-payload-BKU
+# EN
 This library will alow you to send predefined datatypes to TheThingsNetwork.org (TTN) via an Arduino MKRWAN 1300/1310.
 
-# EN
 ### Preperation
 Copy the content of the file "extras/Decoder.js" to the "Payload Formats" tab of your application on thethingsnetwork.org
 ### Sourcecode on your Arduino.
